@@ -10,9 +10,10 @@ class EventController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($event_id)
     {
-        return view('form.event');
+        $event = Event::find($event_id);
+        return view('event', compact('event'));
     }
 
     /**
@@ -21,6 +22,7 @@ class EventController extends Controller
     public function create()
     {
         //
+        return view('form.event');
     }
 
     /**

@@ -12,6 +12,6 @@ class DashboardController extends Controller
     {
         $data = Event::all();
 
-        return view('event', compact('data'));
+        return view('dashboard', compact('data'));
     }
 }

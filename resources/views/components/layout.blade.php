@@ -20,9 +20,10 @@
           <div class="hidden md:block">
             <div class="mx-auto flex items-baseline space-x-4 text-base font-medium">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="/" class="rounded-md px-3 py-2 text-amber-950 hover:bg-amber-950 hover:text-[#FFF7D1] transition-all">Homepage</a>
+              {{-- <a href="/" class="rounded-md px-3 py-2 text-amber-950 hover:bg-amber-950 hover:text-[#FFF7D1] transition-all">Homepage</a>
               <a href="form_kenalan" class="rounded-md px-3 py-2 text-amber-950 hover:bg-amber-950 hover:text-[#FFF7D1] transition-all">Kenalan</a>
-              <a href="pesan" class="rounded-md px-3 py-2 text-amber-950 hover:bg-amber-950 hover:text-[#FFF7D1] transition-all">Pesan</a>
+              <a href="pesan" class="rounded-md px-3 py-2 text-amber-950 hover:bg-amber-950 hover:text-[#FFF7D1] transition-all">Pesan</a> --}}
+              <h1 class="font-bold text-3xl">Sistem Manajemen Acara</h1>
             </div>
           </div>
         </div>

@@ -1,63 +1,63 @@
 <x-layout>
 
+    <div class=" flex gap-8 w-[85%] mt-24">
+        <a class="bg-red-500 rounded-md px-4 py-4 text-amber-50 font-semibold hover:shadow-md hover:bg-red-600 hover:text-amber-100 transition-all self-center " href="{{ route('events_view') }}">👈 Kembali</a>
 
-        <h1 class="font-semibold text-6xl">Daftar event</h1>
+        <a class="bg-blue-200 rounded-md px-4 py-4 text-lime-50 font-semibold hover:shadow-md hover:bg-blue-300 hover:text-lime-100 transition-all self-center " href="/participant-form/{{ $event->event_id }}">Klik untuk Daftar</a>
+    </div>
 
-        <div class="flex flex-col gap-2">
-
-            <div class="flex justify-between">
-
-                <form class="self-start" action="">
-                    <label for="table-search" class="sr-only">Search</label>
     
-                    <div class="relative mt-1">
-                        <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
-                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                            </svg>
-                        </div>
     
-                        <input type="text" id="table-search" class=" py-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-md w-96 bg-white focus:outline-none hover:shadow-md transition-all" placeholder="Cari nama acara">
-                    </div>
-                </form>
-    
-                <form class="" action="{{ route('event_form') }}">
-                    <button class=" hover:shadow-md transition-all rounded-md bg-green-200 p-2 font-semibold">Tambahkan acara</button>
-                </form>
+    <div class=" flex justify-between gap-8 h-fit w-[85%]">
 
-            </div>
-
-            
-                
-    
-            <table class="table-auto shadow-md rounded-md">
-                <thead>
-                  <tr>
-                    <th class="px-4 py-4">Nama Acara</th>
-                    <th class="px-4 py-4">Keterangan</th>
-                    <th class="px-4 py-4">Jumlah Partisipan</th>
-                    <th class="px-4 py-4">Tanggal di-adakan</th>
-                  </tr>
-                </thead>
-                <tbody>
-
-                  @foreach ($data as $event)
-
-                  <tr class="hover:bg-gray-200 hover:transition-all" >
-                    <td class="border px-4 py-4 ">{{ $event->event_name }}</td>
-                    <td class="border px-4 py-4">{{ $event->description }}</td>
-                    <td class="border px-4 py-4">{{ $event->date }}</td>
-                    <td class="border px-4 py-4">{{ $event->max_participants }}</td>
-                  </tr>
-                      
-                  @endforeach
-                  
-    
-                </tbody>
-              </table>
-
-        </div>
         
+
+     
+
+            <div class="p-16 flex flex-col bg-slate-200 w-4/5 gap-4 rounded-md shadow-md mb-24">
     
+                <div class="flex flex-col">
+        
+                    <h1 class="text-5xl border-b border-slate-600 pb-3 ">{{ $event->event_name }}</h1>
+                    <div class="flex justify-between">
+                        <p class="text-slate-400">{{ $event->date }}</p> 
+                        <p class="text-slate-400 self-end justify-items-end">Peserta: 12/{{ $event->max_participants }}</p>
+                    </div>
+        
+                </div>
+                
+                <div class="flex flex-col">
+                    <h3 class="text-2xl mt-5">Deskripsi acara</h3>
+                    <p class="border-t border-slate-600 my-3 max-w-40"></p>
+                    <p>{{ $event->description }}</p>
+                </div>
+        
+            
+            </div>
+        
+            <aside class="p-16 flex flex-col items-center bg-slate-200 w-[30%] gap-4 rounded-md shadow-md mb-24">
+                <section class="flex flex-col items-center gap-4">
     
+                    <h3 class="text-2xl">Narasumber</h3>
+                    <div class="border-b border-slate-600 min-w-full"></div>
+                    <img class="w-3/4 rounded-full object-cover" src="{{ asset('assets/img/guy.jpg') }}" alt="">
+                    
+                </section>
+                
+                <section class="flex flex-col items-center mt-2">
+                    <p>Zamzam Muazam</p>
+                    <p>IT Engineer</p>
+                </section>
+                
+            </aside>
+    
+            
+
+
+        
+    </div>
+
+    
+
+
 </x-layout>
