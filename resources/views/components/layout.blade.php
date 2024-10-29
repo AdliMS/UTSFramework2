@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title> 
+    <title>Manajemen Acara</title> 
     @vite('resources/css/app.css')
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -115,7 +115,7 @@
 
   {{-- <main class="flex items-center justify-center gap-8 min-h-[90vh] my-0 flex-col border-4 border-green-300 "> --}}
 
-  <main class="flex flex-col min-h-[83vh] w-[100vw] justify-center items-center bg-white gap-8  ">
+  <main class="flex flex-col min-h-[83vh] w-[100vw] justify-center items-center bg-[#FFF7D1] gap-8  ">
 
     {{ $slot }}
 

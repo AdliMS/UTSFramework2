@@ -7,6 +7,7 @@ use App\Models\Participant;
 use App\Models\Registration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class ParticipantController extends Controller
 {
@@ -71,7 +72,7 @@ class ParticipantController extends Controller
                 throw $e;
             }
 
-        return to_route('event_form')->with('success', 'Registrasi sukses!');
+        return Redirect::to('/participant-form/'. $event_id)->with('success', 'Registrasi sukses!');
     }
 
     /**

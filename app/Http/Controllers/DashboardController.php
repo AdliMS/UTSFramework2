@@ -10,8 +10,14 @@ class DashboardController extends Controller
     //
     public function index()
     {
-        $data = Event::all();
+        $data = Event::latest();
 
-        return view('dashboard', compact('data'));
+        
+
+        if (request('search')) {
+            $data->where('event_name', request('search'));
+        }
+
+        return view('dashboard', ['data' => $data->get()]);
     }
 }
